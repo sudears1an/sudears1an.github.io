@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sude Arslan | Computer Engineering Student</title>
+    <meta name="description" content="Portfolio of Sude Arslan, Computer Engineering Student interested in Software QA and Development.">
+    
+    <!-- Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons: FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#14b8a6', // Teal 500
+                        secondary: '#0f766e', // Teal 700
+                        darkBg: '#0f172a', // Slate 900
+                        darkCard: '#1e293b', // Slate 800
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #14b8a6; 
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #2dd4bf, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-300 font-sans antialiased selection:bg-primary selection:text-white">
+
+    <nav class="fixed w-full top-0 z-50 bg-darkBg/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-xl font-bold text-white tracking-wider hover:text-primary transition-colors">SA<span class="text-primary">.</span></a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-sm font-medium hover:text-primary transition-colors">About</a>
+                    <a href="#education" class="text-sm font-medium hover:text-primary transition-colors">Education</a>
+                    <a href="#skills" class="text-sm font-medium hover:text-primary transition-colors">Skills</a>
+                    <a href="#projects" class="text-sm font-medium hover:text-primary transition-colors">Projects</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-darkCard border-b border-slate-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium hover:text-primary hover:bg-slate-700">About</a>
+                <a href="#education" class="mobile-link block px-3 py-2 rounded-md text-base font-medium hover:text-primary hover:bg-slate-700">Education</a>
+                <a href="#skills" class="mobile-link block px-3 py-2 rounded-md text-base font-medium hover:text-primary hover:bg-slate-700">Skills</a>
+                <a href="#projects" class="mobile-link block px-3 py-2 rounded-md text-base font-medium hover:text-primary hover:bg-slate-700">Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -z-10"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-primary font-medium tracking-wide mb-3 uppercase text-sm md:text-base">Hello, I'm</h2>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4 tracking-tight">
+                Sude Arslan
+            </h1>
+            <h3 class="text-2xl md:text-4xl font-bold text-slate-400 mb-6">
+                <span class="gradient-text">Computer Engineering</span> Student
+            </h3>
+            <p class="mt-4 text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Passionate about software development, quality assurance (QA), and delivering reliable, well-tested applications. Based in İzmir, Türkiye.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+                <a href="mailto:sudearslan777@gmail.com" class="w-full sm:w-auto px-8 py-3 rounded-full bg-primary text-darkBg font-semibold hover:bg-teal-400 transition-all shadow-[0_0_15px_rgba(20,184,166,0.4)]">
+                    <i class="fas fa-envelope mr-2"></i> Get in Touch
+                </a>
+                <a href="#projects" class="w-full sm:w-auto px-8 py-3 rounded-full bg-transparent border-2 border-slate-700 text-white font-semibold hover:border-primary hover:text-primary transition-all">
+                    View Projects
+                </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex justify-center space-x-6">
+                <a href="https://github.com/sudears1an" target="_blank" class="text-slate-400 hover:text-white hover:-translate-y-1 transform transition-all text-2xl" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/sude-arslan-" target="_blank" class="text-slate-400 hover:text-blue-500 hover:-translate-y-1 transform transition-all text-2xl" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:sudearslan777@gmail.com" class="text-slate-400 hover:text-red-400 hover:-translate-y-1 transform transition-all text-2xl" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Down indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-slate-500 hover:text-primary">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-32">
+        
+        <!-- About Section -->
+        <section id="about" class="scroll-mt-24">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">About Me</h2>
+                <div class="h-[1px] flex-grow bg-slate-800"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="md:col-span-2 space-y-4 text-lg text-slate-400 leading-relaxed">
+                    <p>
+                        I am a Computer Engineering student with a strong foundation in software development, object-oriented programming, and data structures. My primary areas of interest include <span class="text-primary font-medium">Software Quality Assurance (QA)</span>, software testing processes, and ensuring the delivery of highly reliable applications.
+                    </p>
+                    <p>
+                        I have hands-on experience in developing both academic and personal projects utilizing <span class="text-white">Java, C#, Node.js, and SQL</span>. I am constantly eager to improve my skills in manual testing, test case design, API testing, and Agile software development while contributing meaningfully to software quality.
+                    </p>
+                </div>
+                <div class="bg-darkCard p-6 rounded-2xl border border-slate-800 shadow-xl">
+                    <h3 class="text-xl font-bold text-white mb-4 border-b border-slate-700 pb-2">Quick Facts</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 mr-3 w-4"></i>
+                            <span>İzmir, Türkiye</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone text-primary mt-1 mr-3 w-4"></i>
+                            <a href="tel:+905314973558" class="hover:text-primary transition-colors">+90 531 497 3558</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-primary mt-1 mr-3 w-4"></i>
+                            <a href="mailto:sudearslan777@gmail.com" class="hover:text-primary transition-colors break-all">sudearslan777@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="scroll-mt-24">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Education</h2>
+                <div class="h-[1px] flex-grow bg-slate-800"></div>
+            </div>
+            
+            <div class="bg-darkCard p-8 rounded-2xl border border-slate-800 shadow-xl relative overflow-hidden group hover:border-primary/50 transition-colors duration-300">
+                <!-- Decorative accent line -->
+                <div class="absolute left-0 top-0 bottom-0 w-2 bg-primary"></div>
+                
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Tekirdağ Namık Kemal University</h3>
+                        <p class="text-xl text-primary font-medium mt-1">B.Sc. in Computer Engineering</p>
+                    </div>
+                    <div class="mt-4 md:mt-0 text-left md:text-right">
+                        <span class="inline-block px-4 py-1 rounded-full bg-slate-900 text-slate-300 text-sm font-semibold border border-slate-700">
+                            2023 - Present
+                        </span>
+                    </div>
+                </div>
+                <div class="mt-6 flex flex-col sm:flex-row sm:gap-8 gap-4 text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-user-graduate text-slate-500"></i>
+                        <span>Incoming 3rd Year Student</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <span>GPA: 3.34 / 4.00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="scroll-mt-24">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Technical Skills</h2>
+                <div class="h-[1px] flex-grow bg-slate-800"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Languages -->
+                <div class="bg-darkCard p-6 rounded-2xl border border-slate-800 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4 text-2xl">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-900 border border-slate-700 rounded-full text-sm">Java</span>
+                        <span class="px-3 py-1 bg-slate-900 border border-slate-700 rounded-full text-sm">C#</span>
+                        <span class="px-3 py-1 bg-slate-900 border border-slate-700 rounded-full text-sm">JavaScript</span>
+                        <span class="px-3 py-1 bg-slate-900 border border-slate-700 rounded-full text-sm">C</span>
+                        <span class="px-3 py-1 bg-slate-900 border border-slate-700 rounded-full text-sm">SQL</span>
+                    </div>
+                </div>
+
+                <!-- Technologies -->
+                <div class="bg-darkCard p-6 rounded-2xl border border-slate-800 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 mb-4 text-2xl">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Technologies</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-900 border border-slate-700 rounded-full text-sm">Node.js</span>
+                        <span class="px-3 py-1 bg-slate-900 border border-slate-700 rounded-full text-sm">Express.js</span>
+                        <span class="px-3 py-1 bg-slate-900 border border-slate-700 rounded-full text-sm">.NET</span>
+                    </div>
+                </div>
+
+                <!-- Core Concepts -->
+                <div class="bg-darkCard p-6 rounded-2xl border border-slate-800 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 mb-4 text-2xl">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Core Concepts</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-900 border border-slate-700 rounded-full text-sm">OOP</span>
+                        <span class="px-3 py-1 bg-slate-900 border border-slate-700 rounded-full text-sm">Data Structures</span>
+                        <span class="px-3 py-1 bg-slate-900 border border-slate-700 rounded-full text-sm">Algorithms</span>
+                        <span class="px-3 py-1 bg-slate-900 border border-slate-700 rounded-full text-sm">REST APIs</span>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="bg-darkCard p-6 rounded-2xl border border-slate-800 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-400 mb-4 text-2xl">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-900 border border-slate-700 rounded-full text-sm">Git</span>
+                        <span class="px-3 py-1 bg-slate-900 border border-slate-700 rounded-full text-sm">GitHub</span>
+                        <span class="px-3 py-1 bg-slate-900 border border-slate-700 rounded-full text-sm">MS SQL Server</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="scroll-mt-24">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Featured Projects</h2>
+                <div class="h-[1px] flex-grow bg-slate-800"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="bg-darkCard rounded-2xl border border-slate-800 overflow-hidden group hover:border-primary transition-all duration-300 flex flex-col h-full">
+                    <div class="h-48 bg-slate-900 flex items-center justify-center relative overflow-hidden">
+                        <i class="fab fa-java text-6xl text-slate-700 group-hover:text-primary transition-colors duration-500 group-hover:scale-110"></i>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Real-Time Task Scheduler</h3>
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-xs font-semibold px-2 py-1 bg-slate-800 text-primary rounded">Java</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-slate-800 text-slate-300 rounded">Data Structures</span>
+                        </div>
+                        <ul class="text-slate-400 text-sm space-y-2 mb-6 flex-grow list-disc list-inside">
+                            <li>Developed using custom Min-Heap, Stack and Linked List.</li>
+                            <li>Implemented Earliest Deadline First (EDF) and Aging algorithms.</li>
+                            <li>Tested multiple scenarios to validate algorithm correctness.</li>
+                            <li>Performed thorough debugging and performance analysis.</li>
+                        </ul>
+                        <div class="mt-auto border-t border-slate-800 pt-4 flex gap-4">
+                            <a href="https://github.com/sudears1an" target="_blank" class="text-sm font-medium hover:text-primary flex items-center gap-2">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-darkCard rounded-2xl border border-slate-800 overflow-hidden group hover:border-blue-400 transition-all duration-300 flex flex-col h-full">
+                    <div class="h-48 bg-slate-900 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-money-check-alt text-6xl text-slate-700 group-hover:text-blue-400 transition-colors duration-500 group-hover:scale-110"></i>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Payroll Management System</h3>
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-xs font-semibold px-2 py-1 bg-slate-800 text-blue-400 rounded">C#</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-slate-800 text-slate-300 rounded">OOP</span>
+                        </div>
+                        <ul class="text-slate-400 text-sm space-y-2 mb-6 flex-grow list-disc list-inside">
+                            <li>Developed an application heavily focusing on OOP principles.</li>
+                            <li>Applied Encapsulation, Inheritance, and Abstraction.</li>
+                            <li>Verified salary calculation logic through multiple test scenarios.</li>
+                            <li>Focused on maintainable and reliable software architecture.</li>
+                        </ul>
+                        <div class="mt-auto border-t border-slate-800 pt-4 flex gap-4">
+                            <a href="https://github.com/sudears1an" target="_blank" class="text-sm font-medium hover:text-blue-400 flex items-center gap-2">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-darkCard rounded-2xl border border-slate-800 overflow-hidden group hover:border-green-400 transition-all duration-300 flex flex-col h-full">
+                    <div class="h-48 bg-slate-900 flex items-center justify-center relative overflow-hidden">
+                        <i class="fab fa-node-js text-6xl text-slate-700 group-hover:text-green-400 transition-colors duration-500 group-hover:scale-110"></i>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">Secure Backend REST API</h3>
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-xs font-semibold px-2 py-1 bg-slate-800 text-green-400 rounded">Node.js</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-slate-800 text-slate-300 rounded">Express.js</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-slate-800 text-slate-300 rounded">Security</span>
+                        </div>
+                        <ul class="text-slate-400 text-sm space-y-2 mb-6 flex-grow list-disc list-inside">
+                            <li>Developed a secure REST API architecture using Express.js.</li>
+                            <li>Implemented Helmet.js middleware for HTTP security, including XSS protection.</li>
+                            <li>Tested API endpoints and verified request/response behaviors.</li>
+                            <li>Improved reliability through extensive debugging and validation.</li>
+                        </ul>
+                        <div class="mt-auto border-t border-slate-800 pt-4 flex gap-4">
+                            <a href="https://github.com/sudears1an" target="_blank" class="text-sm font-medium hover:text-green-400 flex items-center gap-2">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-darkBg pt-16 pb-8 mt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <p class="text-xl font-bold text-white mb-2">Sude Arslan</p>
+                <p class="text-slate-500 text-sm">Computer Engineering Student & QA Enthusiast</p>
+            </div>
+            
+            <div class="flex gap-4">
+                <a href="https://github.com/sudears1an" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/sude-arslan-" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-500 hover:text-white transition-all">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:sudearslan777@gmail.com" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-red-500 hover:text-white transition-all">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 text-center text-slate-600 text-sm">
+            <p>&copy; <span id="year"></span> Sude Arslan. All rights reserved.</p>
+            <p class="mt-1">Designed & Built for GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
